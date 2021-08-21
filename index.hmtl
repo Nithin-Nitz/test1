@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		let data = []
+		let url = 'https://jsonplaceholder.typicode.com/posts';
+
+		fetch(url)
+		.then(res => res.json())
+		.then((out) => {
+		  console.log('Checkout this JSON! ', out);
+		  data = out;
+		  console.log('data',data)
+
+		for (var x of data) {
+		 	document.write(x.title + "<br >");
+		}
+
+		})
+		.catch(err => { throw err });
+		
+
+		var cars = ['asdasd','asdasd','asdasdasd'];
+		
+		
+	</script>
+	
+</body>
+</html>
